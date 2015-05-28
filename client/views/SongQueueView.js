@@ -11,31 +11,13 @@ var SongQueueView = Backbone.View.extend({
   tagName: "table",
 
   initialize: function(params) {
-    // this.render();
-    // this.model.on('change:currentSong', function(model){
-    //   this.playerView.setSong(model.get('currentSong'));
-    // }, this);
-    // this.render();
-    // console.log(this.collection);
-    // params.collection.on('change:songQueue', function (song) {
-    //   console.log("songqv heard change")
-    //   this.render();
-    // }, this);
-
-    this.collection.on('enqueue', function(model){
-      console.log("SongQueueView heard enqueue and rendered");
+    this.collection.on('add', function () {
       this.render();
     }, this);
 
-    this.collection.on('dequeue', function(model){
-      console.log("SongQueueView heard dequeue and rendered");
+    this.collection.on('remove', function () {
       this.render();
     }, this);
-
-
-    // params.collection.on('dequeue', function (song) {
-    //   this.render();
-    // }, this);
   },
 
 
@@ -47,6 +29,7 @@ var SongQueueView = Backbone.View.extend({
 
     this.$el.html('<th>Queue</th>').append(
       this.collection.map(function(song){
+        console.log("!");
         return new SongQueueEntryView({model: song}).render();
       })
     );
