@@ -5,23 +5,27 @@ var SongQueue = Songs.extend({
 
   initialize: function(){
     this.on("add", function() {
+      console.log("SongQueue heard add event");
       if (this.length === 1) {
         this.playFirst();
       }
     });
 
-    this.on("ended", function(song) {
-      console.log("heard ended");
+    this.on("ended", function() {
+      console.log("SongQueue heard ended event");
       this.shift();
-      // this.playFirst();
+      if (this.length !== 0) {
+        this.playFirst();
+      }
+    });
+
+    this.on("dequeue", function(song){
+      this.remove(song);
     });
   },
 
-
-
   playFirst: function(){
     this.first().play();
-    // this.first().dequeue();
   }
 
 
