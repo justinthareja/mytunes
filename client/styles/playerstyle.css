@@ -1,0 +1,51 @@
+
+body {
+ font-family: 'Press Start 2P';
+ font-size: 14px;
+}
+
+.playerwrapper {
+  width: 550px;
+}
+
+.title {
+  background-color: cyan;
+  width: 550px;
+  font-size: 24px;
+}
+
+.subtitle {
+  background-color: cyan;
+  width: 550px;
+  font-size: 16px;
+}
+
+.breaker {
+  height: 16px;
+  background-color: cyan;
+  width: 550px;
+  font-size: 16px;
+}
+
+.authors {
+  background-color: cyan;
+  width: 550px;
+}
+.logo {
+  background: url("../images/logo.gif");
+  background-size: 100%;
+  height: 400px;
+  width: 550px;
+}
+
+.staticlogo {
+  background-image: url("../images/logostatic.gif");
+  width: 550px;
+}
+
+.audioplayer {
+  width: 550px;
+  background-color: blue;
+}
+
+

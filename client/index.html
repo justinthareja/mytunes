@@ -3,6 +3,8 @@
   <body>
     <!-- Scripts may be placed anywhere on a page. But FYI, they block rendering of elements
      below them until after the scripts load-->
+    <link rel="stylesheet" type="text/css" href="styles/playerstyle.css">
+    <link href='http://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
     <script src="bower_components/jquery/jquery.min.js"></script>
     <script src="bower_components/underscore/underscore.js"></script>
     <script src="bower_components/backbone/backbone.js"></script>
@@ -22,7 +24,14 @@
     <script src="views/SongQueueEntryView.js"></script>
     <script src="views/NowPlayingView.js"></script>
     <script src="views/NowPlayingEntryView.js"></script>
-
+    <div class="playerwrapper">
+    <div class="title">CHILL TUNES PLAYER</div>
+    <div class="subtitle">(KEEP IT CHILL)</div>
+    <div class="breaker"></div>
+    <div class="authors">JUSTIN THAREJA & ZACHARY LESTER, HR 28</div>
+    <div class="logo"></div>
+    </div>
+    <div class="library"><div>
     <script>
       $(function(){
         // set up model objects
