@@ -5,12 +5,23 @@ var SongQueue = Songs.extend({
 
   initialize: function(){
     this.on("add", function() {
-      this.playFirst();
+      if (this.length === 1) {
+        this.playFirst();
+      }
+    });
+
+    this.on("ended", function(song) {
+      console.log("heard ended");
+      this.shift();
+      // this.playFirst();
     });
   },
 
+
+
   playFirst: function(){
     this.first().play();
+    // this.first().dequeue();
   }
 
 
