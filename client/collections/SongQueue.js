@@ -12,16 +12,12 @@ var SongQueue = Songs.extend({
     });
 
     this.on("ended", function() {
-
-      console.log("SongQueue heard ended event");
-
+      // console.log("SongQueue heard ended event");
       this.nowPlaying = false;
       this.shift();
-
       if (this.length !== 0) {
         this.playFirst();
       }
-
     });
 
     this.on("isPlaying", function() {
