@@ -1,51 +1,79 @@
 
 body {
  font-family: 'Press Start 2P';
- font-size: 14px;
+ font-size: 10px;
 }
 
 .playerwrapper {
   width: 550px;
+  position: relative;
 }
 
 .title {
   background-color: cyan;
   width: 550px;
   font-size: 24px;
+  text-align:center;
+  padding: 10px 0px 0px 5px;
 }
 
 .subtitle {
   background-color: cyan;
   width: 550px;
   font-size: 16px;
+  text-align:center;
+  padding: 10px 0px 0px 5px;
 }
 
 .breaker {
   height: 16px;
   background-color: cyan;
-  width: 550px;
+  width: 555px;
   font-size: 16px;
 }
 
 .authors {
   background-color: cyan;
-  width: 550px;
+  width: 555px;
+  font-size: 12px;
+  text-align: center;
+  margin: 18px 0px 12px 0px;
 }
 .logo {
   background: url("../images/logo.gif");
   background-size: 100%;
   height: 400px;
-  width: 550px;
+  width: 555px;
 }
 
 .staticlogo {
   background-image: url("../images/logostatic.gif");
-  width: 550px;
+  background-size: 100%;
+  height: 400px;
+  width: 555px;
 }
 
 .audioplayer {
-  width: 550px;
+  width: 555px;
   background-color: blue;
 }
 
+.library {
+ background-color: cyan;
+}
 
+.queue {
+ background-color: cyan;
+}
+
+.playerheader {
+  background-color: cyan;
+  height: 300px;
+  width: 555px;
+}
+
+.nowplaying {
+  color: white;
+  background-color: #101044;
+  width: 555px;
+}

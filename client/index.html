@@ -25,13 +25,12 @@
     <script src="views/NowPlayingView.js"></script>
     <script src="views/NowPlayingEntryView.js"></script>
     <div class="playerwrapper">
-    <div class="title">CHILL TUNES PLAYER</div>
-    <div class="subtitle">(KEEP IT CHILL)</div>
-    <div class="breaker"></div>
-    <div class="authors">JUSTIN THAREJA & ZACHARY LESTER, HR 28</div>
-    <div class="logo"></div>
+        <div class="playerheader">
+            <div class="title">CHILL TUNES PLAYER</div>
+            <div class="subtitle">(KEEP IT CHILL)</div>
+            <div class="authors">JUSTIN THAREJA & ZACHARY LESTER, HR 28</div>
+        </div>
     </div>
-    <div class="library"><div>
     <script>
       $(function(){
         // set up model objects
@@ -42,7 +41,7 @@
         var appView = new AppView({model: app});
 
         // put the view onto the screen
-        $('body').append(appView.render());
+        $('.playerheader').append(appView.render());
       });
     </script>
   </body>

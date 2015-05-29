@@ -5,12 +5,11 @@ var NowPlayingEntryView = Backbone.View.extend({
 
   template: _.template('<td><strong>Now Playing:</strong></td><td>(<%= artist %>)</td><td><%= title %></td>'),
 
-  // events: {
-  //   'click': function() {
-  //     console.log("SongQueueEntryView heard click and fired model.dequeue");
-  //     this.model.ended();
-  //   }
-  // },
+  events: {
+    'click': function() {
+      this.model.dequeue();
+    }
+  },
 
   render: function(){
     return this.$el.html(this.template(this.model.attributes));

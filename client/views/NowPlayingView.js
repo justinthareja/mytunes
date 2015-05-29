@@ -2,6 +2,7 @@
 var NowPlayingView = Backbone.View.extend({
 
   tagName: "table",
+  className: "nowplaying",
 
   initialize: function(params) {
     this.collection.on('add', function () {
@@ -11,8 +12,6 @@ var NowPlayingView = Backbone.View.extend({
     this.collection.on('remove', function () {
       this.render();
     }, this);
-
-    this.render();
   },
 
 

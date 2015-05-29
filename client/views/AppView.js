@@ -16,10 +16,11 @@ var AppView = Backbone.View.extend({
 
   render: function(){
     return this.$el.html([
-      this.playerView.$el,
-      this.nowPlayingView.$el,
       this.libraryView.$el,
-      this.songQueueView.$el
+      this.songQueueView.$el,
+      '<div id="logodiv" class="staticlogo"></div>',
+      this.playerView.$el,
+      this.nowPlayingView.$el
     ]);
   }
 
